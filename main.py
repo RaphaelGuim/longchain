@@ -1,6 +1,5 @@
 import argparse
 import warnings
-from email.policy import default
 
 from langchain.chains import LLMChain
 from langchain.llms import OpenAI
@@ -12,6 +11,7 @@ parser.add_argument("--language", default="python")
 args = parser.parse_args()
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 
 llm = OpenAI()
 code_promt = PromptTemplate(
